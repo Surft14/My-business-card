@@ -1,13 +1,186 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"content="text/html; charset=UTF-8" http-equiv="Content-Type">
-    <title>Surft14</title>
+    <meta name="viewport" content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>Журавлев Константин Михайлович</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" th:href="@{/css/containers-flex.css}">
+    <link rel="stylesheet" th:href="@{/css/images.css}">
+    <link rel="stylesheet" th:href="@{/css/projects.css}">
+    <link rel="stylesheet" th:href="@{/css/buttons.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
-    <header></header>
-    <main><h1>Hello!</h1></main>
-    <footer></footer>
+    <button id="go-top-btn" onclick="goTopFunction()"><i class="fas fa-arrow-up"></i></button>
+    <header>
+        <div class="wrapper">
+            <div class="container container-flex-header">
+                <div class="photo_fio_container">
+                    <img th:src="@{/image/me.jpg}" alt="me" id="me">
+                    <h2>Журавлев Константин Михайлович</h2>
+                </div>
+                <div class="contact_container">
+                    <a href="https://t.me/Surft14" id="telegram" target="_blank" style="font-size: 2rem;">Telegram</a>
+                    <a href="https://github.com/Surft14" id="github" target="_blank" style="font-size: 2rem;">Github</a>
+                    <a href="mailto:mr.darck31@gmail.com" id="email" target="_blank" style="font-size: 2rem;">Email</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="container container-flex-main">
+                <h2>Проекты: </h2>
+                <nav>
+                    <h3>Содержание страницы: </h3>
+                    <ul>
+                        <li style="font-size: 1.6rem;"><a href="#project1">Weather Android</a></li>
+                        <li style="font-size: 1.6rem;"><a href="#project2">Weather Server</a></li>
+                    </ul>
+                </nav>
+                <div class="container_projects">
+                    <div class="project">
+                        <h1 id="project1">1. Weather Android</h1>
+                        <div class="images">
+                            <img th:src="@{/image/p_1.jpg}" alt="photo 1" id="photo_project">
+                            <img th:src="@{/image/p_2.jpg}" alt="photo 2" id="photo_project">
+                            <img th:src="@{/image/p_3.jpg}" alt="photo 3" id="photo_project">
+                            <img th:src="@{/image/p_4.jpg}" alt="photo 4" id="photo_project">
+                            <img th:src="@{/image/p_5.jpg}" alt="photo 5" id="photo_project">
+                        </div>
+                        <div class="description">
+                            <h3>🌦️ Weather Android App</h3>
+                            <p>
+                                Приложение погоды, разработанное на Kotlin + Jetpack Compose, с кэшированием, загрузкой
+                                фоновых изображений по погодным условиям и безопасным подключением к серверу через
+                                HTTPS.
+                            </p>
+                            <h4>📱 Особенности</h4>
+                            <ul>
+                                <li>Отображение текущей погоды и прогноза.</li>
+                                <li>Поддержка нескольких городов.</li>
+                                <li>Кэширование погоды с проверкой срока годности (TTL).</li>
+                                <li>Автоматическое восстановление UI из кэша при запуске.</li>
+                                <li>Загрузка фонового изображения с сервера в зависимости от погодного состояния.</li>
+                                <li>Хранение фонового изображения в DataStore (в формате Base64).</li>
+                                <li>Безопасное соединение с сервером через HTTPS.</li>
+                                <li>ViewModel и Repository архитектура.</li>
+                            </ul>
+                            <h4>🔗 Backend-сервер</h4>
+                            <p>
+                                Для работы приложение подключается к серверу на Spring Boot:
+
+                                <a href="https://github.com/Surft14/weatherserver.git" target="_blank"
+                                    style="color: blue;">👉 Репозиторий сервера (Spring Boot)</a>
+
+                                Сервер предоставляет:
+                            </p>
+                            <ul>
+                                <li>JSON-ответы по текущей погоде.</li>
+                                <li>Фоновые изображения (.png) по погодному коду.</li>
+                                <li>Кросс-доменные HTTPS-запросы.</li>
+                                <li>Простое RESTful API.</li>
+                            </ul>
+                            <h4>🛠️ Стек технологий</h4>
+                            <ul>
+                                <li>Kotlin</li>
+                                <li>Jetpack Compose</li>
+                                <li>ViewModel / State management</li>
+                                <li>Volley / Coil</li>
+                                <li>Android DataStore</li>
+                                <li>Base64, Bitmap</li>
+                                <li>HTTPS (с сертифицированным IP)</li>
+                            </ul>
+                            <h4>🚀 Запуск</h4>
+                            <ol>
+                                <li>Убедитесь, что сервер запущен и доступен.</li>
+                                <li>Клонируйте этот репозиторий.</li>
+                                <li>Откройте проект в Android Studio.</li>
+                                <li>Запустите сборку и установите приложение на устройство.</li>
+                            </ol>
+                            <h4>💻 Репозиторий на GitHub</h4>
+                            <p><a href="https://github.com/Surft14/Weather-app.git" target="_blank" style="color: blue;">Ссылка</a></p>
+                        </div>
+                        <h1 id="project2">2. Weather Server</h1>
+                        <div class="description">
+                            <h3>🌐 Weather Server (Spring Boot)</h3>
+                            <p>
+                                Это backend-сервер для Android-приложения прогноза погоды. Сервер предоставляет API для
+                                получения актуальных погодных данных и фоновых изображений в зависимости от погодных
+                                условий.
+                            </p>
+                            <h4>
+                                ⚙️ Основные возможности
+                            </h4>
+                            <ul>
+                                <li>REST API для получения погоды по названию города</li>
+                                <li>Выдача погодных изображений (.png) по состоянию погоды</li>
+                                <li>HTTPS-подключение с валидным сертификатом</li>
+                                <li>Поддержка JSON-ответов</li>
+                                <li>Оптимизация под работу с мобильным приложением</li>
+                                <li>Хранения данных о погоде в базе данных</li>
+                            </ul>
+                            <h4>🔗 Android-приложение (frontend)</h4>
+                            <p>Приложение, использующее этот сервер:
+                                <a href="https://github.com/Surft14/Weather-app.git" style="color: blue;">👉 Репозиторий
+                                    Android-приложения</a>
+                            </p>
+                            <h4>🛠️ Технологии</h4>
+                            <ul>
+                                <li>Java 17</li>
+                                <li>Spring Boot</li>
+                                <li>Spring Web</li>
+                                <li>HTTPS</li>
+                                <li>JSON</li>
+                                <li>CORS конфигурация</li>
+                                <li>Серверные изображения</li>
+                                <li>MySQL</li>
+                            </ul>
+                            <h4>🚀 Как запустить</h4>
+                            <ol>
+                                <li>Убедитесь, что у вас установлен Java 17+ и Maven.</li>
+                                <li>Склонируйте репозиторий.</li>
+                                <li>Добавьте .yml конфигурации и HTTPS сертификат.</li>
+                                <li>Выполните: ./mvnw spring-boot:run</li>
+                            </ol>
+                            <h4>💻 Репозиторий на GitHub</h4>
+                            <p><a href="https://github.com/Surft14/weatherserver" target="_blank" style="color: blue;">Ссылка</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="wrapper">
+            <div class="container container-flex-footer">
+                <h1>Автор: Журавлев Константин Михайлович</h1>
+            </div>
+        </div>
+    </footer>
+    <script>
+        let btn = document.getElementById('go-top-btn')
+        window.onscroll = function(){
+            scrollFucntion()
+        };
+
+        function scrollFucntion() {
+            if(document.documentElement.scrollTop > 50){
+                btn.style.display = 'block';
+            }else{
+                btn.style.display = 'none';
+            }
+        };
+
+
+
+        function goTopFunction(){
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
+
 </html>

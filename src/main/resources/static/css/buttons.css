@@ -1,0 +1,13 @@
+#go-top-btn{
+    position: fixed;
+    bottom: 1.5rem;
+    right: 3rem;
+    z-index: 1000;
+    font-size: 1.8rem;
+    background-color: dodgerblue;
+    color: black;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: none;
+}
