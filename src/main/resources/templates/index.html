@@ -9,20 +9,23 @@
     <link rel="stylesheet" th:href="@{/css/containers-flex.css}">
     <link rel="stylesheet" th:href="@{/css/images.css}">
     <link rel="stylesheet" th:href="@{/css/projects.css}">
+    <link rel="stylesheet" th:href="@{/css/buttons.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
+    <button id="go-top-btn" onclick="goTopFunction()"><i class="fas fa-arrow-up"></i></button>
     <header>
         <div class="wrapper">
             <div class="container container-flex-header">
                 <div class="photo_fio_container">
                     <img th:src="@{/image/me.jpg}" alt="me" id="me">
-                    <h3>Журавлев Константин Михайлович</h3>
+                    <h2>Журавлев Константин Михайлович</h2>
                 </div>
                 <div class="contact_container">
-                    <a href="https://t.me/Surft14" id="telegram" target="_blank" style="font-size: 3rem;">Telegram</a>
-                    <a href="https://github.com/Surft14" id="github" target="_blank" style="font-size: 3rem;">Github</a>
-                    <a href="mailto:mr.darck31@gmail.com" id="email" target="_blank" style="font-size: 3rem;">Email</a>
+                    <a href="https://t.me/Surft14" id="telegram" target="_blank" style="font-size: 2rem;">Telegram</a>
+                    <a href="https://github.com/Surft14" id="github" target="_blank" style="font-size: 2rem;">Github</a>
+                    <a href="mailto:mr.darck31@gmail.com" id="email" target="_blank" style="font-size: 2rem;">Email</a>
                 </div>
             </div>
         </div>
@@ -31,9 +34,16 @@
         <div class="wrapper">
             <div class="container container-flex-main">
                 <h2>Проекты: </h2>
+                <nav>
+                    <h3>Содержание страницы: </h3>
+                    <ul>
+                        <li style="font-size: 1.6rem;"><a href="#project1">Weather Android</a></li>
+                        <li style="font-size: 1.6rem;"><a href="#project2">Weather Server</a></li>
+                    </ul>
+                </nav>
                 <div class="container_projects">
                     <div class="project">
-                        <h1>1. Weather Android</h1>
+                        <h1 id="project1">1. Weather Android</h1>
                         <div class="images">
                             <img th:src="@{/image/p_1.jpg}" alt="photo 1" id="photo_project">
                             <img th:src="@{/image/p_2.jpg}" alt="photo 2" id="photo_project">
@@ -94,7 +104,7 @@
                             <h4>💻 Репозиторий на GitHub</h4>
                             <p><a href="https://github.com/Surft14/Weather-app.git" target="_blank" style="color: blue;">Ссылка</a></p>
                         </div>
-                        <h1>2. Weather Server</h1>
+                        <h1 id="project2">2. Weather Server</h1>
                         <div class="description">
                             <h3>🌐 Weather Server (Spring Boot)</h3>
                             <p>
@@ -144,6 +154,33 @@
             </div>
         </div>
     </main>
+    <footer>
+        <div class="wrapper">
+            <div class="container container-flex-footer">
+                <h1>Автор: Журавлев Константин Михайлович</h1>
+            </div>
+        </div>
+    </footer>
+    <script>
+        let btn = document.getElementById('go-top-btn')
+        window.onscroll = function(){
+            scrollFucntion()
+        };
+
+        function scrollFucntion() {
+            if(document.documentElement.scrollTop > 50){
+                btn.style.display = 'block';
+            }else{
+                btn.style.display = 'none';
+            }
+        };
+
+
+
+        function goTopFunction(){
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
 
 </html>
