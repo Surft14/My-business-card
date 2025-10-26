@@ -38,3 +38,11 @@
     height: 100%;
     width: 35%;
 }
+
+.container_projects{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: 100%;
+}
