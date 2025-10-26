@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="text/html; charset=UTF-8" http-equiv="Content-Type">
     <title>Журавлев Константин Михайлович</title>
-    <link rel="stylesheet" href="../static/css/main.css">
-    <link rel="stylesheet" href="../static/css/containers-flex.css">
-    <link rel="stylesheet" href="../static/css/images.css">
-    <link rel="stylesheet" href="../static/css/projects.css">
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" th:href="@{/css/containers-flex.css}">
+    <link rel="stylesheet" th:href="@{/css/images.css}">
+    <link rel="stylesheet" th:href="@{/css/projects.css}">
 </head>
 
 <body>
@@ -16,7 +16,7 @@
         <div class="wrapper">
             <div class="container container-flex-header">
                 <div class="photo_fio_container">
-                    <img src="../image/me.jpg" alt="me" id="me">
+                    <img src="@{/image/me.jpg}" alt="me" id="me">
                     <h3>Журавлев Константин Михайлович</h3>
                 </div>
                 <div class="contact_container">
@@ -35,11 +35,11 @@
                     <div class="project">
                         <h1>1. Weather Android</h1>
                         <div class="images">
-                            <img src="../image/p_1.jpg" alt="photo 1" id="photo_project">
-                            <img src="../image/p_2.jpg" alt="photo 2" id="photo_project">
-                            <img src="../image/p_3.jpg" alt="photo 3" id="photo_project">
-                            <img src="../image/p_4.jpg" alt="photo 4" id="photo_project">
-                            <img src="../image/p_5.jpg" alt="photo 5" id="photo_project">
+                            <img src="@{/image/p_1.jpg}" alt="photo 1" id="photo_project">
+                            <img src="@{/image/p_2.jpg}" alt="photo 2" id="photo_project">
+                            <img src="@{/image/p_3.jpg}" alt="photo 3" id="photo_project">
+                            <img src="@{/image/p_4.jpg}" alt="photo 4" id="photo_project">
+                            <img src="@{/image/p_5.jpg}" alt="photo 5" id="photo_project">
                         </div>
                         <div class="description">
                             <h3>🌦️ Weather Android App</h3>
